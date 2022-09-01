@@ -8,6 +8,7 @@
 --white: #ffffff;
 --sm: 15px;
 --md: 20px;
+--lg-md: 30px;
 --lg: 40px;
 }
 body{
@@ -19,13 +20,18 @@ body{
 }
 nav{
     display: grid;
+    justify-self: flex-start;
     width: 100%;
     height: 100hv;
 }
-.nav-general li{
-    list-style: none;
+.nav-general{
+    margin: 10px;
+    padding: 0;
     width: 3%;
     height: auto;
+} 
+.nav-general li{
+    list-style: none;
 }
 .nav-general li a{
     display: block;
@@ -193,4 +199,50 @@ footer p a:hover{
     transform: scale(1.1);
     transition-duration: 0.5s;
 }
-
+@media (max-width: 640px){
+    .nav-general li a img{
+        width: 20px;
+        height: 20px;
+    }
+    .nav-vertical {
+        width: auto;
+        height: auto;
+        font-size: 10px;
+    }
+    header h1{
+        font-size: var(--lg-md);
+    }
+    main p{
+        font-size: var(--sm);
+        text-align: center;
+    }
+    .card-container{
+        width: 200px;
+        border-radius: 15px;
+    }
+    .image-container{
+        width: 200px;
+        height: 200px;
+    }
+    .image-container img{
+        width: 180px;
+        height: 180px;
+        border-radius: 18px;
+    }
+    .form-container h6{
+        font-size: var(--sm);
+    }
+    .button-container a{
+        font-size: var(--sm);
+    }
+    .button-container a:nth-child(1){
+        width: 100px;
+        height: 20px;
+    }
+    .button-container a:nth-child(2){
+        width: 50px;
+    }
+    footer p{
+        font-size: var(--sm);
+    }
+}
